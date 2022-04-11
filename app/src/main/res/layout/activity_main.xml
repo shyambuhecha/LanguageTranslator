@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offWhite"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       >
+
+       <LinearLayout
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginEnd="20dp"
+           android:gravity="center"
+           >
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_gravity="center"
+               android:layout_marginEnd="4dp"
+               android:src="@drawable/translate"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:text="Language Translator"
+               android:layout_marginStart="4dp"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:textSize="23dp"/>
+
+
+       </LinearLayout>
+       <LinearLayout
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:weightSum="3"
+           android:layout_marginStart="20dp"
+           android:layout_marginEnd="20dp"
+           android:layout_marginTop="40dp"
+           android:background="@drawable/background"
+           android:elevation="4dp">
+
+           <Spinner
+               android:id="@+id/idFromSpinner"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_margin="3dp"
+               android:padding="3dp"
+               android:layout_gravity="center"
+               android:layout_height="wrap_content"/>
+           <ImageView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:layout_gravity="center"
+               android:src="@drawable/reload"
+               />
+           <Spinner
+               android:id="@+id/idToSpinner"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_margin="3dp"
+               android:padding="3dp"
+               android:layout_gravity="center"
+               android:layout_height="wrap_content"/>
+
+       </LinearLayout>
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_marginTop="20dp"
+           android:layout_marginEnd="20dp"
+           android:layout_marginStart="20dp"
+           app:boxBackgroundMode="none"
+           android:elevation="8dp"
+           android:padding="5dp"
+           app:hintEnabled="false"
+           android:layout_height="250dp">
+           
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/idEditSource"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:hint="Enter Text"
+               android:ems="10"
+               android:textSize="19dp"
+               android:textColor="@color/black"
+               android:importantForAutofill="no"
+               android:gravity="top"
+               android:background="@drawable/background"
+               android:textColorHint="@color/colorSecondary"
+               android:inputType="textImeMultiLine|textMultiLine">
+
+           </com.google.android.material.textfield.TextInputEditText>
+
+       </com.google.android.material.textfield.TextInputLayout>
+
+       <com.google.android.material.button.MaterialButton
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="20dp"
+           android:id="@+id/btnTranslation"
+           android:text="Translate "
+
+           android:textSize="19dp"
+           android:textAllCaps="false"/>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/idTranslatedTV"
+           android:text="Translated text here"
+
+           android:elevation="3dp"
+           android:background="@drawable/background"
+           android:layout_marginTop="10dp"
+           android:layout_marginStart="20dp"
+           android:layout_gravity="center"
+           android:textAlignment="center"
+           android:letterSpacing="0.03"
+           android:visibility="gone"
+           android:layout_marginEnd="20dp"
+           android:padding="16sp"
+           android:textSize="16sp"
+           android:textColor="@color/color_primary">
+       </TextView>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Or"
+           android:textSize="16sp"
+           android:textColor="@color/color_primary_dark"
+           android:layout_gravity="center"
+           android:layout_marginTop="20dp"/>
+       <ImageView
+           android:id="@+id/idIVMic"
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:src="@drawable/voice"
+           android:padding="4dp"
+           android:layout_gravity="center"
+           android:layout_marginTop="20dp"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Say something"
+           android:textSize="16sp"
+
+           android:layout_gravity="center"
+           android:layout_marginTop="10dp"
+           android:textAlignment="center"/>
+
+
+   </LinearLayout>
+
+</ScrollView>
